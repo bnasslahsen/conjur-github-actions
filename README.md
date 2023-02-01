@@ -36,7 +36,7 @@ conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a git
 ./enable-authenticator.sh
 ```
 
-## GITHUB Authenticator Setup  - AS Projects Team
+## GITHUB Hosts Setup  - AS Projects Team
 
 - Declare Your Apps 
 ```shell
@@ -48,7 +48,7 @@ conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a git
 load-grants.sh
 ```
 
-## GITHUB WORKFLOW SETUP
+## GITHUB WORKFLOW SETUP - AS Projects Team
 
 - Add conjur-demo.yml to actions
 - Set the following GITHUB Action secrets:
