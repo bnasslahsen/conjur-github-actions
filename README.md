@@ -3,6 +3,8 @@
 ## Pre-requisites
 - OS Linux / MacOS
 - conjur-cli
+- Clone this repository: https://github.com/bnasslahsen/conjur-github-actions
+- Adapt the **.env** file and replace the values with your GIITHUB Self Hosted setup
 
 ## Conjur Initial Setup - AS Security Admin
 
