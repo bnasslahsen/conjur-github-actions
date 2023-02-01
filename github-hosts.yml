@@ -4,7 +4,7 @@
   body:
     - &hosts
       - !host
-        id: github-demo-host2
+        id: $GITHUB_WORKFLOW_NAME
         annotations:
           authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: $GITHUB_REPOSITORY
           authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: $GITHUB_WORKFLOW_NAME
