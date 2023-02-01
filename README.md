@@ -56,3 +56,5 @@ conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a git
   - `CONJUR_URL` - Add Conjur FQDN (Including schema and port)
   - `CONJUR_ACCOUNT` - Add Conjur Account
   - `CONJUR_SECRETS` - Add Conjur Secrets list to retrieve github-team/github-apps/secrets1|SECRET1;github-team/github-apps/secrets12|SECRET2
+- Add `.github/workflows/conjur-demo.yml` to your repository actions
+- In your repository web page, click on Actions and test the workflow
