@@ -45,7 +45,7 @@ conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a git
 
 - Grant Applications hosts access to the Safe - AS Projects Team (Only run this in case of an existing safe in the PAM)
 ```shell
-load-grants.sh
+./load-grants.sh
 ```
 
 ## GITHUB WORKFLOW SETUP - AS Projects Team
