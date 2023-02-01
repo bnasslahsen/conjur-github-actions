@@ -4,10 +4,10 @@
   body:
     - &hosts
       - !host
-        id: github-demo-host
+        id: github-demo-host2
         annotations:
-          authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: bnasslahsen/conjur-github-actions
-          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: github-demo-host
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: $GITHUB_REPOSITORY
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: $GITHUB_WORKFLOW_NAME
     - !grant
       role: !group
       members: *hosts
