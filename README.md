@@ -1,4 +1,4 @@
-# Demo project for Github
+# Demo project for Github Actions integration with CyberArk Conjur
 
 ## Pre-requisites
 - OS Linux / MacOS
