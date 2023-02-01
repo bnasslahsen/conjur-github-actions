@@ -49,7 +49,6 @@ conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a git
 ```
 
 ## GITHUB WORKFLOW SETUP - AS Projects Team
-
 - Add conjur-demo.yml to actions
 - Set the following GITHUB Action secrets:
   - `CONJUR_AUTHN_ID`- For this demo, the Conjur authenticator ID is: **github**
