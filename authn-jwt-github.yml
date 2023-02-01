@@ -32,5 +32,5 @@
         resource: !webservice status
 
 - !grant
-  role: !group $CONJUR_AUTHENTICATOR_ID/apps
+  role: !group conjur/authn-jwt/$CONJUR_AUTHENTICATOR_ID/apps
   member: !group /$GITHUB_IDENTITY
