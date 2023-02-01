@@ -52,7 +52,7 @@ load-grants.sh
 
 - Add conjur-demo.yml to actions
 - Set the following GITHUB Action secrets:
-  - `CONJUR_AUTHN_ID`- For this demo, the Conjur authenticator ID is: **github*
+  - `CONJUR_AUTHN_ID`- For this demo, the Conjur authenticator ID is: **github**
   - `CONJUR_PUBLIC_KEY` - Add Conjur public key
   - `CONJUR_URL` - Add Conjur FQDN (Including schema and port)
   - `CONJUR_ACCOUNT` - Add Conjur Account
