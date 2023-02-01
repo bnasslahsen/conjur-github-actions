@@ -1,0 +1,3 @@
+- !grant
+  role: !group github-safe-admins
+  member: !group /github-team/managers

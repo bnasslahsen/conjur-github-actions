@@ -1,0 +1,23 @@
+- !policy
+  id: github-apps
+  owner: !group managers
+  body:
+    - &hosts
+      - !host
+        id: github-demo-host
+        annotations:
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: bnasslahsen/conjur-github-actions
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: github-demo-host
+    - !grant
+      role: !group
+      members: *hosts
+    - &variables
+      - !variable secrets1
+      - !variable secrets2
+    - !permit
+      role: !group
+      privilege: [ read, execute ]
+      resource: *variables
+
+
+

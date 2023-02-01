@@ -1,0 +1,18 @@
+# conjur policy update -f users.yml -b root
+
+# Define Admins, create admins group
+- !group
+  id: admins
+  owner: !user admin
+
+# To add users to admin group, update grants.yml policy file
+- !user
+  id: github.manager@acme.corp
+  owner: !group admins
+  annotations:
+    first_name: Github
+    last_name: Manager
+    full_name: Github Manager
+    email: github.manager@acme.corp
+    company: ACME
+
