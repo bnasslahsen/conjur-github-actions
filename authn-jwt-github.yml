@@ -1,5 +1,5 @@
 - !policy
-    id: $CONJUR_AUTHENTICATOR_ID
+    id: conjur/authn-jwt/$CONJUR_AUTHENTICATOR_ID
     body:
     - !webservice
       # Uncomment one of following variables depending on the public availability
