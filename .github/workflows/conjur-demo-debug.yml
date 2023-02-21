@@ -1,4 +1,4 @@
-name: Test get secrets from conjur with API KEY
+name: Test get secrets from conjur-authn-jwt with DEBUG
 on:
   push:
     branches: [ "master" ]
