@@ -1,4 +1,7 @@
 name: Test get secrets from conjur-authn-jwt with DEBUG
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
 on:
   push:
     branches: [ "master" ]
@@ -10,6 +13,8 @@ jobs:
     steps:
       - run: |
           echo "Authenticate via Authn-JWT"
+          echo $ACTIONS_ID_TOKEN_REQUEST_TOKEN
+          echo $ACTIONS_ID_TOKEN_REQUEST_URL
           JWT_TOKEN=$(curl -H "Authorization:bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r .value )
           echo $JWT_TOKEN
   
