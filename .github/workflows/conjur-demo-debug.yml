@@ -23,6 +23,6 @@ jobs:
           echo " "
           echo "---- Retrieving Secret Value -----------"
           echo "ID: ${{ secrets.SECRET_ID }}"
-          echo "Value: $CONJUR_SECRET
+          echo "Value: $CONJUR_SECRET"
           echo "----------------------------------------"
           echo " "
