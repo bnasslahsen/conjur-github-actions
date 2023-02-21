@@ -23,7 +23,7 @@ conjur policy update -b root -f github-branch.yml | tee -a github-branch.log
 
 - Delegation on the branch for the team (Only run this in case of an existing safe in the PAM)
 ```shell
-conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a github-user-grants.yml 
+conjur policy update -b vault-uat/LOB_UAT -f github-user-grants.yml | tee -a github-user-grants.log 
 ```
 
 ## GITHUB Authenticator Setup  - AS Security Admin
