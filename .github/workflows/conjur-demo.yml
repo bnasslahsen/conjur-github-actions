@@ -19,7 +19,7 @@ jobs:
           echo $JWT_TOKEN | base64
           SESSION_TOKEN=$(curl -k -s --request POST "${{ secrets.CONJUR_URL }}/authn-jwt/${{ secrets.CONJUR_AUTHN_ID }}/${{ secrets.CONJUR_ACCOUNT }}/authenticate" --header "Content-Type: application/x-www-form-urlencoded" --header "Accept-Encoding: base64" --data-urlencode "jwt=$JWT_TOKEN")
           echo $SESSION_TOKEN | base64
-          CONJUR_SECRET=$(curl -k -s -H "Authorization: Token token="${{ secrets.CONJUR_URL }}/secrets/${{ secrets.CONJUR_ACCOUNT }}/variable/${{ secrets.SECRET_ID }}")
+          CONJUR_SECRET=$(curl -k -s -H "Authorization: Token token=\"${{ secrets.CONJUR_URL }}\""/secrets/${{ secrets.CONJUR_ACCOUNT }}/variable/${{ secrets.SECRET_ID }}")
           echo " "
           echo "---- Retrieving Secret Value -----------"
           echo "ID: ${{ secrets.SECRET_ID }}"
