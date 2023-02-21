@@ -1,3 +1,3 @@
 - !grant
-  role: !group github-safe-admins
+  role: !group ocp-safe-admins
   member: !group /github-team/managers
