@@ -12,6 +12,9 @@ jobs:
   fetch-secret-from-conjur:
     runs-on: ubuntu-latest
     steps:
+      - name: test
+        run: curl https://ipinfo.io/ip
+        
       - name: Import Secrets using CyberArk Conjur Secret Fetcher
         uses: cyberark/conjur-action@v2.0.2
         with:
