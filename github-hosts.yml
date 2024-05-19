@@ -1,23 +1,19 @@
 - !policy
-  id: github-apps
-  owner: !group managers
+  id: $APP_GROUP
+  owner: !group $APP_GROUP
   body:
     - &hosts
       - !host
-        id: $GITHUB_WORKFLOW_NAME
+        id: conjur-demo
         annotations:
-          authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: $GITHUB_REPOSITORY
-          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: $GITHUB_WORKFLOW_NAME
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: bnasslahsen/conjur-github-actions
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: github-demo-host
     - !grant
       role: !group
       members: *hosts
-    - &variables
-      - !variable secrets1
-      - !variable secrets2
-    - !permit
-      role: !group
-      privilege: [ read, execute ]
-      resource: *variables
+
+
+
 
 
 

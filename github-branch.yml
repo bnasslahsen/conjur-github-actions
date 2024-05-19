@@ -1,19 +1,15 @@
 # conjur policy update -f github-branch.yml -b root
 - !policy
-  id: github-team
-  owner: !group admins
+  id: $APP_GROUP
   annotations:
-    description: All One GITHUB policies
+    description: All GITHUB policies
   body:
-    - !group managers
     - !group
-      id: github-apps
-      owner: !group managers
     - !grant
-      role: !group managers
+      role: !group
       members:
-        - !user /github.manager@acme.corp
+        - !user /badr.nasslahsen@cyberark.com
     - !permit
-      role: !group managers
+      role: !group
       privileges: [ read,update,create ]
       resource: !policy

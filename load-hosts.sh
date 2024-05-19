@@ -4,10 +4,6 @@ set -a
 source ".env"
 set +a
 
-envsubst < github-hosts.yml > github-hosts.yml.tmp
-conjur policy update -f github-hosts.yml.tmp -b github-team | tee -a github-hosts.log
-rm github-hosts.yml.tmp
 
-## set dummy secrets values for testing purspose only
-conjur variable set -i github-team/github-apps/secrets1 -v "secret-value1"
-conjur variable set -i github-team/github-apps/secrets2 -v "secret-value2"
+conjur policy update -b root -f <(envsubst < github-hosts.yml)
+conjur policy update -b vault01/LOBUser1 -f <(envsubst < github-hosts-grants.yml)
