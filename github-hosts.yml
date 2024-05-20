@@ -7,7 +7,7 @@
         id: conjur-demo
         annotations:
           authn-jwt/$CONJUR_AUTHENTICATOR_ID/repository: bnasslahsen/conjur-github-actions
-          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: github-demo-host
+          authn-jwt/$CONJUR_AUTHENTICATOR_ID/workflow: conjur-demo
     - !grant
       role: !group
       members: *hosts
