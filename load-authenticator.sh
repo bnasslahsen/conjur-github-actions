@@ -4,7 +4,7 @@ set -a
 source ".env"
 set +a
 
-# Create Gitlab Branch
+# Create Github Branch
 conjur policy update -b root -f <(envsubst < github-branch.yml)
 
 #Load Github authenticator policy
